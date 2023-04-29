@@ -1,3 +1,5 @@
+_G.lunar = {}
+
 reload "user.plugins"
 reload "user.options"
 reload "user.keymaps"

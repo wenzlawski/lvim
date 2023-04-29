@@ -46,6 +46,7 @@ lvim.plugins = {
   "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
   "mrjones2014/smart-splits.nvim",
+  "folke/trouble.nvim",
   -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
