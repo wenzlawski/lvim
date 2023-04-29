@@ -1,4 +1,12 @@
-lvim.colorscheme = "darkplus"
+local current_theme_name = os.getenv "BASE16_THEME"
+local colorscheme = "lunar"
+if current_theme_name and vim.g.colors_name ~= "base16-" .. current_theme_name then
+  vim.cmd "let base16colorspace=256"
+  colorscheme = "base16-" .. current_theme_name
+end
+
+lvim.colorscheme = colorscheme
+
 -- lvim.colorscheme = "poimandres"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true

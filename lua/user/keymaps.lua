@@ -11,10 +11,10 @@ keymap("n", "<C-i>", "<C-i>", opts)
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<m-h>", "<C-w>h", opts)
-keymap("n", "<m-j>", "<C-w>j", opts)
-keymap("n", "<m-k>", "<C-w>k", opts)
-keymap("n", "<m-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<cmd> lua require('smart-splits').move_cursor_left()<CR>", opts)
+keymap("n", "<C-j>", "<cmd> lua require('smart-splits').move_cursor_down()<CR>", opts)
+keymap("n", "<C-k>", "<cmd> lua require('smart-splits').move_cursor_up()<CR>", opts)
+keymap("n", "<C-l>", "<cmd> lua require('smart-splits').move_cursor_right()<CR>", opts)
 keymap("n", "<m-tab>", "<c-6>", opts)
 
 function _G.set_terminal_keymaps()
@@ -33,13 +33,13 @@ vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 -- keymap("n", "<s-\\>", ":tabonly<cr>", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", "<cmd> lua require('smart-splits').resize_up()<CR>", opts)
+keymap("n", "<C-Down>", "<cmd> lua require('smart-splits').resize_down()<CR>", opts)
+keymap("n", "<C-Left>", "<cmd> lua require('smart-splits').resize_left()<CR>", opts)
+keymap("n", "<C-Right>", "<cmd> lua require('smart-splits').resize_right()<CR>", opts)
 
-keymap("n", "<c-j>", "<c-d>", opts)
-keymap("n", "<c-k>", "<c-u>", opts)
+-- keymap("n", "<c-j>", "<c-d>", opts)
+-- keymap("n", "<c-k>", "<c-u>", opts)
 keymap("n", "<c-m>", "<s-m>", opts)
 
 keymap("n", "n", "nzz", opts)

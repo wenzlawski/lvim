@@ -45,6 +45,7 @@ lvim.plugins = {
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
+  "mrjones2014/smart-splits.nvim",
   -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
@@ -91,6 +92,10 @@ lvim.plugins = {
     "tzachar/cmp-tabnine",
     event = "InsertEnter",
     build = "./install.sh",
+  },
+  {
+    "RRethy/nvim-base16",
+    priority = 1000,
   },
 
   "MunifTanjim/nui.nvim",
