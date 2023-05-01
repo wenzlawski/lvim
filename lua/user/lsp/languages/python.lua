@@ -1,8 +1,13 @@
 -- Set a formatter.
+lvim.builtin.treesitter.ensure_installed = { "python" }
+
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black", filetypes = { "python" } },
 }
+
+lvim.format_on_save.enabled = true
+lvim.format_on_save.pattern = { "*.py" }
 
 -- Set a linter.
 local linters = require "lvim.lsp.null-ls.linters"
@@ -35,3 +40,13 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     }
   end,
 })
+
+lvim.plugins = {
+  "ChristianChiarulli/swenv.nvim",
+  "stevearc/dressing.nvim",
+}
+
+lvim.builtin.which_key.mappings["C"] = {
+  name = "Python",
+  c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
+}

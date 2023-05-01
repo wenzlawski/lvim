@@ -1,5 +1,9 @@
 -- Additional Plugins
 lvim.plugins = {
+  "mrjones2014/smart-splits.nvim",
+  "tpope/vim-dispatch",
+  "clojure-vim/vim-jack-in",
+  "Olical/conjure",
   "olivercederborg/poimandres.nvim",
   "bluz71/vim-moonfly-colors",
   "ellisonleao/gruvbox.nvim",
@@ -45,8 +49,8 @@ lvim.plugins = {
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
-  "mrjones2014/smart-splits.nvim",
   "folke/trouble.nvim",
+  "JuliaEditorSupport/julia-vim",
   -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
